@@ -13,5 +13,8 @@ namespace proyecto_final_prog2.Domain.Entities
         [MaxLength(100)]
         [Required]
         public string column_title { get; set; }
+        
+        [Required]
+        public List<Task> tasks { get; set; } = [];
     }
 }
