@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using proyecto_final_prog2.Domain.Base;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace proyecto_final_prog2.Domain.Entities
 {
@@ -19,8 +20,7 @@ namespace proyecto_final_prog2.Domain.Entities
         public string text{ get; set; }
 
         //[Required]
-        //[ForeignKey()]
-        //public int column_id { get; set; } //reserved for the relation with the column.
+        //public Column column { get; set; } //reserved for the relation with the column.
         
         public List<Tag> tags { get; set; } = [];
     }
