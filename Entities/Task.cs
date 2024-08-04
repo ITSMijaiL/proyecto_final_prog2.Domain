@@ -18,10 +18,15 @@ namespace proyecto_final_prog2.Domain.Entities
         [MaxLength(1200)]
         [Required]
         public string text{ get; set; }
+        //public int column_id { get; set; }
+        //public Column column { get; set; }
 
+        //public List<Tag> tags { get; set; } = [];
         //[Required]
-        //public Column column { get; set; } //reserved for the relation with the column.
-        
-        public List<Tag> tags { get; set; } = [];
+        [Required]
+        public virtual ICollection<Tag> tags { get; set; } = new List<Tag>();
+
+        public int? ColumnID { get; set; }
+        //public virtual Column Column { get; set; }
     }
 }
